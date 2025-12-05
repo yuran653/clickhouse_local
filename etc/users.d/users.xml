@@ -1,0 +1,22 @@
+<!-- User configuration -->
+<clickhouse>
+    <!-- User accounts -->
+    <users>
+        <!-- datalake user -->
+        <datalake>
+            <!-- Password -->
+            <password from_env="CH_PASSWORD"/>
+            <!-- Profile -->
+            <profile>default</profile>
+            <!-- Quota -->
+            <quota>default</quota>
+
+            <!-- Networks -->
+            <networks>
+                <ip>127.0.0.1</ip>
+                <ip>172.0.0.0/8</ip>
+                <ip>::/0</ip>
+            </networks>
+        </datalake>
+    </users>
+</clickhouse>

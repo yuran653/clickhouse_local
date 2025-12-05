@@ -1,0 +1,7 @@
+volumes/zk
+volumes/01
+volumes/02
+volumes/ch-init
+etc/config.d/node.xml
+etc/users.d/default-user.xml
+.env
