@@ -55,8 +55,8 @@ services:
     cpus: 0.9
     mem_limit: 1.8g
     ports:
-      - "18123:8123"
-      - "19000:9000"
+      - "18123:18123"
+      - "19000:19000"
     restart: always
     env_file:
       - .env
