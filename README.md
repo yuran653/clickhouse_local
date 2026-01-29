@@ -16,7 +16,10 @@ This project provides a local development environment for a 2-node ClickHouse cl
     ```
 
 2.  **Configure Environment**:
-    Ensure you have a `.env` file in the root directory. You can copy the example if provided or create one with necessary variables (e.g., `CH_PASSWORD`)
+    Create a `.env` file in the root directory with the necessary variables. You can run the following command to create a default one:
+    ```bash
+    echo 'CH_PASSWORD="password"' > .env
+    ```
 
 3.  **Start Services**:
     Launch the cluster in detached mode
@@ -29,6 +32,26 @@ This project provides a local development environment for a 2-node ClickHouse cl
     ```bash
     docker compose ps
     ```
+
+## Connecting with DBeaver
+
+To connect to the ClickHouse cluster using [DBeaver](https://dbeaver.io/), use the following connection settings:
+
+### Connection Details (Node 1)
+- **Host**: `localhost`
+- **Port**: `8123` (HTTP) or `9000` (Native)
+- **Database**: `ch_datalake` (created automatically on startup)
+- **Username**: `datalake`
+- **Password**: The password defined in your `.env` (default: `password`)
+
+### Connection Details (Node 2)
+- **Host**: `localhost`
+- **Port**: `18123` (HTTP) or `19000` (Native)
+- **Database**: `ch_datalake`
+- **Username**: `datalake`
+- **Password**: The password defined in your `.env` (default: `password`)
+
+> **Note**: For the best experience, use the **ClickHouse** driver in DBeaver.
 
 ## Services
 
